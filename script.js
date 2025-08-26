@@ -25,7 +25,7 @@ async function fetchProducts() {
 }
 
 // Generate product cards dynamically
-function displayProducts(products) {
+function displayProducts(products) {ā
   products.forEach(product => {
     const card = document.createElement("div");
     card.classList.add("product-card");
