@@ -1,79 +1,77 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: sans-serif;
   margin: 20px;
-  background: #f5f5f5;
-}
-
-h1 {
-  text-align: center;
-  margin-bottom: 20px;
 }
 
 #product-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
-/* Product Card */
 .product-card {
-  background: #fff;
-  border-radius: 10px;
-  padding: 15px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-  text-align: center;
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 180px;
+  cursor: pointer;
   transition: transform 0.2s;
 }
 
 .product-card:hover {
-  transform: scale(1.03);
+  transform: scale(1.05);
 }
 
-.product-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: contain;
+#product-detail {
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  padding: 20px;
+  border: 1px solid #333;
+  z-index: 10;
+  max-width: 400px;
+  display: none;
 }
 
-/* Product Title */
-.product-card h3 {
-  font-size: 1.1em;
-  margin: 10px 0;
+.hidden {
+  display: none;
 }
 
-/* Price Styling */
-.price {
-  font-size: 1.2em;
-  color: #27ae60;
-  font-weight: bold;
+.image-container {
+  position: relative;
 }
 
-/* Button */
-.add-to-cart {
+#detail-image {
+  width: 200px;
+}
+
+#zoom-lens {
+  border: 1px solid #000;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  display: none;
+  pointer-events: none;
+}
+
+.quantity-wrapper {
   margin-top: 10px;
-  padding: 10px 15px;
-  background: #3498db;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
 }
 
-.add-to-cart:hover {
-  background: #2980b9;
+.quantity-controls {
+  display: flex;
+  align-items: center;
 }
 
-/* Loading & Error */
-#loading {
+.quantity-controls input {
+  width: 50px;
   text-align: center;
-  margin: 20px 0;
-  font-weight: bold;
+  margin: 0 5px;
 }
 
-#error {
-  text-align: center;
-  color: red;
-  margin-top: 15px;
+#feedback {
+  color: green;
+  margin-top: 10px;
+  display: none;
 }
-ā
