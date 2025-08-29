@@ -3,62 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive E-Commerce Page</title>
+    <title>Product Grid</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<h1>Product Listing</h1>
-<div id="cart-count">🛒 Cart (0)</div>
-<div id="product-grid"></div>
-
-<!-- Product Detail Modal -->
-<div id="product-detail" class="hidden">
-    <button id="close-detail" aria-label="Close product detail">✖</button>
-
-    <div class="image-container">
-        <img id="detail-image" src="" alt="Product image">
-        <div id="zoom-lens"></div>
-    </div>
-
-    <h2 id="detail-title"></h2>
-    <p id="detail-description"></p>
-    <p>Price: $<span id="detail-price">0.00</span></p>
-
-    <!-- Quantity -->
-    <div class="quantity-wrapper">
-        <label for="quantity">Quantity</label>
-        <div class="quantity-controls">
-            <button id="decrease">-</button>
-            <input type="number" id="quantity" value="1" min="1">
-            <button id="increase">+</button>
+<main>
+    <!-- Product 1 -->
+    <div class="product" data-id="1" data-name="Cool Shirt" data-price="800" data-image="images/shirt.jpg">
+        <img src="images/shirt.jpg" alt="Cool Shirt">
+        <h3>Cool Shirt</h3>
+        <p>₹800</p>
+        <div class="quantity-control">
+            <button class="decrease">-</button>
+            <input type="number" value="1" min="1" aria-label="Quantity">
+            <button class="increase">+</button>
         </div>
+        <button class="add-to-cart">Add to Cart</button>
     </div>
 
-    <!-- Size -->
-    <div>
-        <label for="size-select">Size</label>
-        <select id="size-select">
-            <option value="S">Small</option>
-            <option value="M">Medium</option>
-            <option value="L">Large</option>
-        </select>
+    <!-- Product 2 -->
+    <div class="product" data-id="2" data-name="Trendy Jeans" data-price="1200" data-image="images/jeans.jpg">
+        <img src="images/shirt.jpg" alt="Trendy Jeans">
+        <h3>Trendy Jeans</h3>
+        <p>₹1200</p>
+        <div class="quantity-control">
+            <button class="decrease">-</button>
+            <input type="number" value="1" min="1" aria-label="Quantity">
+            <button class="increase">+</button>
+        </div>
+        <button class="add-to-cart">Add to Cart</button>
     </div>
 
-    <!-- Color -->
-    <div>
-        <label for="color-select">Color</label>
-        <select id="color-select">
-            <option value="Red">Red</option>
-            <option value="Blue">Blue</option>
-            <option value="Green">Green</option>
-        </select>
+    <!-- Product 3 -->
+    <div class="product" data-id="3" data-name="Stylish Jacket" data-price="2000" data-image="images/jacket.jpg">
+        <img src="images/shoes.jpg" alt="Stylish Jacket">
+        <h3>Stylish Jacket</h3>
+        <p>₹2000</p>
+        <div class="quantity-control">
+            <button class="decrease">-</button>
+            <input type="number" value="1" min="1" aria-label="Quantity">
+            <button class="increase">+</button>
+        </div>
+        <button class="add-to-cart">Add to Cart</button>
     </div>
-
-    <p>Total: $<span id="total-price">0.00</span></p>
-    <button id="add-to-cart">Add to Cart</button>
-    <div id="feedback" role="status" aria-live="polite">Product added to cart!</div>
-</div>
+</main>
 
 <script src="script.js"></script>
 </body>
